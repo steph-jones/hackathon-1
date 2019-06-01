@@ -1,5 +1,5 @@
-
-
+<h1> <%= @trip.id ? "Edit Trip" : "New Trip" %> </h1>
+<hr />  
 <%= form_with(model: @trip, local: true) do |f| %>
   <form class="ui form">
 

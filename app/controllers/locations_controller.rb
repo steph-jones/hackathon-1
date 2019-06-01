@@ -3,36 +3,40 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   def index
-    @locations = @trip.locations
+    @locations = @trip.location
   end
 
   def show
   end
 
   def new
-    @location = @trip.locations.new
-    render partial: "form"
+    @location = @trip.location.new
+    # render partial: "form"
   end
 
   def edit
-    render partial: "form"
+    # render partial: "form"
   end
 
   def create
-    @location = @trip.locations.new(location_params)
+    @location = @trip.location.new(location_params)
     
     if @location.save
+      flash[:success] = "Location: #{@location.name} Created"
+      # redirect_to trips_path
       redirect_to trip_locations_path(@trip)
     else
-      render partial: "form"
+      flash[:error] = "Error #{@location.errors.full_messages.join("\n")}"
+      render :new
     end
   end
 
   def update
     if @location.update(location_params)
+      # redirect_to trips_path
       redirect_to trip_locations_path(@trip)
     else
-      render partial: "form"
+      render :edit
     end
 
   end
@@ -44,7 +48,7 @@ class LocationsController < ApplicationController
 
   private 
   def set_trip
-    @trip = trip.find(params[:trip_id])
+    @trip = Trip.find(params[:trip_id])
   end
 
   def set_location

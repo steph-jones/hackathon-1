@@ -16,9 +16,9 @@
   </header>
   <div class="introduction-section">
     <h2>Welcome <%= current_user.first_name %></h2>
-    <p><a href="">Plan a Trip with us</p>
-    <p><a href="">View your next trips</p>
-
+    <p><%= link_to "Plan a Trip with Us", new_trip_path %></p>
+    <p><%= link_to "View Your Trips", trips_path %></p>
+  
  
 
   </div>
