@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import "semantic-ui";
+ 
+
+ body {
+    padding: 1em;
+  }
+  
+  .ui.color1.button {
+    background-color: #A52A2A;
+    color: #fff;
+  }
+  
+  .ui.color2.button {
+    background-color: #F9A0A0;
+    color: #fff;
+  }
+  
+  .ui.color3.button {
+    background-color: #EA7171;
+    color: #fff;
+  }
+  
+  .ui.color4.button {
+    background-color: #DE627F;
+    color: #fff;
+  }
+  
+  .ui.color5.button {
+    background-color: #F9A0A0;
+    color: #fff;
+  }
+
+//   blue #73A8C2
+  
+  .ui.list>a.item {
+    cursor: pointer;
+    color: #1CB084;
+  /*  color: #41C49C;*/
+  /*    color: #7CEAD9;*/
+  }
+  
+  .ui.list>a.item:hover{
+    color: #2F8C70;
+  }

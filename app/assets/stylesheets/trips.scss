@@ -35,7 +35,7 @@ text-align: center;
 
 .masthead {
 padding: 6em 0;
-background-image: url('app/assets/images/main.png');
+background-image: url('main.png');
 background-size: cover;
 background-repeat: no-repeat;
 border-top: solid 1em #A52A2A;
@@ -55,6 +55,11 @@ border-top: solid 1em #A52A2A;
  font-size: 6em;
  letter-spacing: -0.02em;
  text-transform: uppercase;
+ text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 
@@ -70,7 +75,7 @@ text-align: center;
 
 .masthead {
 padding: 6em 0;
-background-image: url('app/assets/images/main.png');
+background-image: url('main.png');
 background-repeat: no-repeat;
 border-top: solid 1em #A52A2A;
 }
@@ -81,14 +86,6 @@ font-family: "Gentium Book Basic", Georgia, serif;
  font-size: 2em;
 }
 
-.masthead-heading {
-margin-top: -0.2em;
-font-family: "Open Sans", "Helvetica Neue", sans-serif;
-font-weight: bold;
-font-size: 6em;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-}
 .introduction > p,
 .content-footer > p {
  font-weight: 300;
