@@ -8,12 +8,14 @@
       <a href="index.html">Home</a>
       <a href="show.html">My Trips</a>
       <a href="about.html">About us</a>
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
     </ul>
   <header class='masthead'>
     <p class='masthead-intro'>My Trip</p>
     <h1 class='masthead-heading'>PLANNER</h1>
   </header>
   <div class="introduction-section">
+    <h2>Welcome <%= current_user.first_name %></h2>
     <p><a href="">Plan a Trip with us</p>
     <p><a href="">View your next trips</p>
 
