@@ -15,7 +15,7 @@
     <%= link_to 'Edit Trip', edit_trip_path(@trip) %> 
   </div> 
     <div class="ui basic blue button">
-    <%= link_to 'Show', trips_path %>
+    <%= link_to 'Show', trip_locations_path(@trip) %>
   </div>
     <%= link_to 'Cancel Trip', @trip, method: :delete, class: "ui red button inverted" %>
   </div>
