@@ -1,4 +1,5 @@
-<%= form_with(model: [@trip, @location], local: true, class: "ui form") do |f| %> %>
+<h1> <%= @location.id ? "Edit Location" : "New Location" %> </h1>
+<%= form_with(model: [@trip, @location], local: true, class: "ui form") do |f| %> 
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name, required: true, placeholder: "Location Name" %>
@@ -7,5 +8,8 @@
     <%= f.label :duration, placeholder: "# days"  %>
     <%= f.text_field :duration%>
   </div>
-  <%= f.submit "Create Location", class: "btn light-green accent-3" %>
+
+  <%= f.submit "Create Location" %>
 <% end %>
+
+
