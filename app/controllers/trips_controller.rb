@@ -41,7 +41,7 @@ class TripsController < ApplicationController
 
   private
     def trip_params
-      params.require(:trip).permit(:name, :balance)
+      params.require(:trip).permit(:name, :description, :start_date, :end_date)
     end
 
     # don't just find by the trip model or you may potentially be able to view other users trips
