@@ -55,6 +55,11 @@ border-top: solid 1em #A52A2A;
  font-size: 6em;
  letter-spacing: -0.02em;
  text-transform: uppercase;
+ text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 section > h1 {
