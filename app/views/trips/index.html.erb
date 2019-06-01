@@ -4,14 +4,19 @@
   <% @trips.each do |trip| %>
     <div class="sixteen wide mobile eight wide tablet four wide computer column">
       <div class="ui card">
-      
+      <div class="content">
+          <%= link_to "#{trip.name}", trip, class: "header" %>
+        </div>
+        <div class="content">
+          <%= link_to "#{trip.description}", trip, class: "header" %>
+        </div>
         <div class="extra content">
           <div class="ui three buttons">
             <div class="ui basic green button">
               <%= link_to 'Edit', edit_trip_path(@trips) %>
             </div>
             <div class="ui basic red button">
-              <%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Delete', @trip, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
             <div class="ui basic blue button">
             <%= link_to "Show", trip_path(@trips) %>
