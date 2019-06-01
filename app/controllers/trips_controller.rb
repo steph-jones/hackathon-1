@@ -1,4 +1,6 @@
 class TripsController < ApplicationController
+  # before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -43,6 +45,10 @@ class TripsController < ApplicationController
     def trip_params
       params.require(:trip).permit(:name, :description, :start_date, :end_date)
     end
+
+    # def set_user
+    #   @user = User.find(params[:id])
+    # end
 
     # don't just find by the trip model or you may potentially be able to view other users trips
     def set_trip

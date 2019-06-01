@@ -1,0 +1,19 @@
+<h1> <%= @address.id ? "Edit Address for" : "Create Address for" %> <%= @location.name %> </h1>
+<hr />
+<%= form_for [@location, @address] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Address Name'%>
+  <br />
+  <%= f.label :street_address %>
+  <%= f.text_field :street_address, placeholder: 'Street Address'% %>
+  <br />
+  <%= f.label :city %>
+  <%= f.text_field :city, placeholder: 'City'% %>
+  <br />
+  <%= f.label :State %>
+  <%= f.text_field :State, placeholder: 'State'% %>
+  <br />
+  <%= f.label :zipcode %>
+  <%= f.text_field :zipcode, placeholder: 'Zipcode'% %>
+  <%= f.submit %>
+<% end %>
