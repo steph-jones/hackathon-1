@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# 3.times do |i|
+#     User.create(first_name: "#{i} first", last_name: "#{i} last") 
+# end
+
+# 3.times do |i|
+#     Trip.create(name: "trip #{i}")
+# end
+
+# puts("seed complete")
