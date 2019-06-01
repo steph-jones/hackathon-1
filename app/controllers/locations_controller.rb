@@ -52,7 +52,7 @@ class LocationsController < ApplicationController
   end
 
   def set_location
-    @location = Location.find(params[:trip_id])
+    @location = Location.find(params[:id])
   end
 
   def location_params
