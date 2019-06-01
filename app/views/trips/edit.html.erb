@@ -1,7 +1,13 @@
-<h1> Edit Trip </h1>
+<%= render 'layouts/navbar' %>
+
+<br />
+<hr>
+
+<h1> Edit the information of your trip here</h1>
 
 <%= render "form", trip: @trip %>
 
 <br />
 <%= link_to "Show", trip_path(@trip) %> | 
 <%= link_to "Back", trip_path %>
+
