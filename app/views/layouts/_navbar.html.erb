@@ -11,23 +11,3 @@
         <% end %>
     </div>
 </nav>
-
-
-<div class="ui card">
- <div class="image">
-    <img src="/<%= @person.avatar %>?set=set4" />
-  </div>
-  <div class="content">
-    <p class="header">
-      <%= @trip.name  %>
-    </p>
-     <div class="meta">
-      <span class="date"><%= @trip.description %></span>
-    </div>
-  </div>
-  <div class="extra content">
-    <%= link_to 'Edit Trip', edit_trip_path(@trip) %> |
-    <%= link_to 'Back', trips_path %>
-    <%= link_to 'Cancel Trip', @trip, method: :delete, class: "ui red button inverted" %>
-  </div>
-</div>
