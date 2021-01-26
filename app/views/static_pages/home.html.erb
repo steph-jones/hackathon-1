@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/scss" rel="stylesheet" href="../app/assets/stylesheets/trips.scss"/>
+		<title>Trip Planner</title>
+	</head>
+  <body>
+    <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+    <%# <ul class="navbar">
+      <a href="index.html">Home</a>
+      <a href="show.html">My Trips</a>
+      <a href="about.html">About us</a>
+    </ul> %>
+  <header class='masthead'>
+    <p class='masthead-intro'>My Trip</p>
+    <h1 class='masthead-heading'>PLANNER</h1>
+  </header>
+  <div class="introduction-section">
+    <h2>Welcome <%= current_user.first_name %></h2>
+    <p><%= link_to "Plan a Trip with Us", new_trip_path %></p>
+    <p><%= link_to "View Your Trips", trips_path %></p>
+  
+ 
+
+  </div>
+
+  <footer class="content-footer">
+      <p>Wanderlust!</p>
+  </footer>
+</body>
+</html>
+

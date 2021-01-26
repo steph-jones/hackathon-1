@@ -1,2 +1,13 @@
-<h1>Trips#edit</h1>
-<p>Find me in app/views/trips/edit.html.erb</p>
+<%= render 'layouts/navbar' %>
+
+<br />
+<hr>
+
+<h1> Edit the information of your trip here</h1>
+
+<%= render "form", trip: @trip %>
+
+<br />
+<%= link_to "Show", trip_path(@trip) %> | 
+<%= link_to "Back", trip_path %>
+

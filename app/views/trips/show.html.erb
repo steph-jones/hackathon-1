@@ -1,2 +1,22 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
+<%= render 'layouts/navbar' %>
+
+
+<div class="ui card">
+  <div class="content">
+    <p class="header">
+      <%= @trip.name %> <%= @trip.description %>
+    </p>
+     <div class="meta">
+      <span class="date"><%= @trip.description %></span>
+    </div>
+  </div>
+  <div class="extra content">
+  <div class="ui basic blue button">
+    <%= link_to 'Edit Trip', edit_trip_path(@trip) %> 
+  </div> 
+    <div class="ui basic blue button">
+    <%= link_to 'Show', trip_locations_path(@trip) %>
+  </div>
+    <%= link_to 'Cancel Trip', @trip, method: :delete, class: "ui red button inverted" %>
+  </div>
+</div>

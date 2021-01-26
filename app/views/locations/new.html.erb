@@ -1,2 +1,7 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<%= render 'layouts/navbar' %>
+
+<%= render "form", location: @location %>
+
+<br /> 
+<%= link_to "Back", trip_locations_path %>
+

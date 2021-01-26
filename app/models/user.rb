@@ -8,7 +8,7 @@ class User < ApplicationRecord
     "#{self.first_name} #{self.last_name}"
   end
 
-  has_many :trip, dependent: :destroy
+  has_many :trips, dependent: :destroy
 
 end
 
